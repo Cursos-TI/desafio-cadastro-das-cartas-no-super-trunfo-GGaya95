@@ -7,8 +7,9 @@
 //Teste larissa
 
 int main() {
+    //Dados das variáveis das cartas
     char estado [10];
-    char codigo [3];
+    char codigo [3]; // código da carta, pois cada carta tem um número
     char cidade[30];
 
     int populacao;
@@ -22,19 +23,19 @@ int main() {
     printf("Código:" \n);
     scanf("%s", &codigo);
 
-    printf("Nome da cidade:" \n);
+    printf("Nome da cidade:"\n);
     scanf("%s", &cidade);
 
-    printf("Total de habitantes: \n");
+    printf("Total de habitantes:\n");
     scanf("%d", &populacao);
 
-    printf("Pontos turísticos:" \n);
+    printf("Pontos turísticos:"\n);
     scanf("%f", &pontosturisticos);
 
-    printf("Área:" \n);
+    printf("Área:"\n);
     scanf("%f", &area);
 
-    printf("PIB:" \n);
+    printf("PIB:"\n);
     scanf("%f", &pib);
 
 
