@@ -3,7 +3,7 @@
 typedef struct {
     char estado[10];
     char codigo[4];
-    int populacao, pontoturisticos;
+    int populacao, pontosturisticos;
     float area; // tamanho da cidade
     float pib; // produto interno bruto que é a riqueza
     } Carta;  
@@ -30,11 +30,11 @@ typedef struct {
  printf("Digite o PIB (em bilhões de dólares): ");
  scanf("%f", &carta1.pib);
 
- printf("Digite o número de pontos turísticos: ");
- scanf("%d", &carta1.pontoturisticos);
+ printf("Número de pontos turísticos: ");
+ scanf("%d", &carta1.pontosturisticos);
  printf("\n");
 
- //Informações da primeira carta
+ //Informações da segunda carta
 
  printf("Informe os dados da segunda carta:\n");
  printf("Código:\n");
@@ -52,8 +52,8 @@ typedef struct {
  printf("Digite o PIB (em bilhões de dólares): ");
  scanf("%f", &carta2.pib);
 
- printf("Digite o número de pontos turísticos: ");
- scanf("%d", &carta2.pontoturisticos);
+ printf("Número de pontos turísticos: ");
+ scanf("%d", &carta2.pontosturisticos);
  printf("\n");
 
 
