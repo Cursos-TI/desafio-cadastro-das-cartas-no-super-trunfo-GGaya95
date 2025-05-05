@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 typedef struct {
-    char estado[10];
+    char estado[15];
     char codigo[4];
+    char cidade[15];
     int populacao, pontosturisticos;
     float area; // tamanho da cidade
     float pib; // produto interno bruto que é a riqueza
@@ -20,6 +21,9 @@ typedef struct {
 
  printf("Estado:\n");
  scanf("%s", carta1.estado);
+
+ printf("Cidade:\n");
+ scanf("%s", carta1.cidade);
 
  printf("Quantos habitantes?:\n");
  scanf("%d", carta1.populacao);
@@ -42,6 +46,9 @@ typedef struct {
 
  printf("Estado:\n");
  scanf("%s", carta2.estado);
+
+ printf("Cidade:\n");
+ scanf("%s", carta1.cidade);
 
  printf("Quantos habitantes?:\n");
  scanf("%d", carta2.populacao);
