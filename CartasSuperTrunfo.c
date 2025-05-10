@@ -1,88 +1,78 @@
 #include <stdio.h>
 #include <string.h>
+
+#define TAM_ESTADO 10
+#define TAM_CODIGO 4
+/*Ao compilar o código anterior ele parava em habitantes, juntava todas as linhas seguintes,
+ pois estava consumindo oos caractéres anteriores restantes no buffer. Agora para cada scanf %s tem um while para
+ evitar qualquer caractere restante no buffer*/
 typedef struct {
-    char estado[15];
-    char codigo[4];
-    char cidade[15];
+    char estado[TAM_ESTADO];
+    char codigo[TAM_CODIGO];
     int populacao, pontosturisticos;
     float area; // tamanho da cidade
     float pib; // produto interno bruto que é a riqueza
-    } Carta;  
+} Carta;
 
-    int main (){
-// criar duas cartas
- Carta carta1;
- Carta carta2;
+int main() {
+    // criar duas cartas
+    Carta carta1;
+    Carta carta2;
+    int leitura_ok;
 
- //Informações da primeira carta
- printf("Informe os dados da primeira carta:\n");
- printf("Código:\n");
- scanf("%s", carta1.codigo);
+    // Informações da primeira carta
+    printf("Informe os dados da primeira carta:\n");
+    printf("Código: "); 
+    leitura_ok = scanf("%3s", carta1.codigo);
+    if (leitura_ok != 1) return 1;
+    while (getchar() != '\n'); 
+    printf("Estado: "); 
+    leitura_ok = scanf("%9s", carta1.estado);
+    if (leitura_ok != 1) return 1;
+    while (getchar() != '\n'); 
 
- printf("Estado:\n");
- scanf("%s", carta1.estado);
+    printf("Quantos habitantes?: "); 
+    leitura_ok = scanf("%d", &carta1.populacao);
+    if (leitura_ok != 1) return 1;
 
- printf("Cidade:\n");
- scanf("%s", carta1.cidade);
+    printf("Digite a área (em km²): "); 
+    leitura_ok = scanf("%f", &carta1.area);
+    if (leitura_ok != 1) return 1;
 
- printf("Quantos habitantes?:\n");
- scanf("%d", carta1.populacao);
+    printf("Digite o PIB (em  reais): "); 
+    leitura_ok = scanf("%f", &carta1.pib);
+    if (leitura_ok != 1) return 1;
 
- printf("Digite a área (em km²): ");
- scanf("%f", &carta1.area);
+    printf("Digite o número de pontos turísticos: "); 
+    leitura_ok = scanf("%d", &carta1.pontosturisticos);
+    if (leitura_ok != 1) return 1;
+    printf("\n");
 
- printf("Digite o PIB (em bilhões de dólares): ");
- scanf("%f", &carta1.pib);
+    // Informações da segunda carta
+    printf("Informe os dados da segunda carta:\n");
+    printf("Código: ");  Removi a quebra de linha
+    leitura_ok = scanf("%3s", carta2.codigo);
+    if (leitura_ok != 1) return 1;
+    while (getchar() != '\n'); 
 
- printf("Número de pontos turísticos: ");
- scanf("%d", &carta1.pontosturisticos);
- printf("\n");
+    printf("Estado: ");
+    leitura_ok = scanf("%9s", carta2.estado);
+    if (leitura_ok != 1) return 1;
+    while (getchar() != '\n'); 
 
- //Informações da segunda carta
+    printf("Quantos habitantes?: "); 
+    leitura_ok = scanf("%d", &carta2.populacao);
+    if (leitura_ok != 1) return 1;
 
- printf("Informe os dados da segunda carta:\n");
- printf("Código:\n");
- scanf("%s", carta2.codigo);
+    printf("Digite a área (em km²): "); 
+    leitura_ok = scanf("%f", &carta2.area);
+    if (leitura_ok != 1) return 1;
 
- printf("Estado:\n");
- scanf("%s", carta2.estado);
+    printf("Digite o PIB (em reais): "); 
+    leitura_ok = scanf("%f", &carta2.pib);
+    if (leitura_ok != 1) return 1;
 
- printf("Cidade:\n");
- scanf("%s", carta1.cidade);
-
- printf("Quantos habitantes?:\n");
- scanf("%d", carta2.populacao);
-
- printf("Digite a área (em km²): ");
- scanf("%f", &carta2.area);
-
- printf("Digite o PIB (em bilhões de dólares): ");
- scanf("%f", &carta2.pib);
-
- printf("Número de pontos turísticos: ");
- scanf("%d", &carta2.pontosturisticos);
- printf("\n");
-
-
-// Mostar primeira carta
-printf(" Primeira Carta\n");
-printf("Código: %s\n", carta1.codigo);
-printf("População: %d habitantes\n", carta1.populacao);
-printf("Área: %.2f km²\n", carta1.area);
-printf("PIB: %.2f bilhões de dólares\n", carta1.pib);
-printf("Pontos Turísticos: %d\n", carta1.pontosturisticos);
-printf("\n");
-
-// Mostrar segunda carta
-printf("Segunda Carta \n");
-printf("Código: %s\n", carta2.codigo);
-printf("População: %d habitantes\n", carta2.populacao);
-printf("Área: %.2f km²\n", carta2.area);
-printf("PIB: %.2f bilhões de dólares\n", carta2.pib);
-printf("Pontos Turísticos: %d\n", carta2.pontosturisticos);
-printf("\n");
-
-
-return 0
-
-}
+    printf("Digite o número de pontos turísticos: ");
+    leitura_ok = scanf("%d", &carta2.pontosturisticos);
+    if (leitura_ok != 1) return 1;
+    printf("\n");
