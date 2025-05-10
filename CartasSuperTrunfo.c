@@ -50,7 +50,7 @@ int main() {
 
     // Informações da segunda carta
     printf("Informe os dados da segunda carta:\n");
-    printf("Código: ");  Removi a quebra de linha
+    printf("Código: "); 
     leitura_ok = scanf("%3s", carta2.codigo);
     if (leitura_ok != 1) return 1;
     while (getchar() != '\n'); 
