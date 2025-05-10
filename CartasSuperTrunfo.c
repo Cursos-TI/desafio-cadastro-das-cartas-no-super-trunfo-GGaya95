@@ -76,5 +76,5 @@ int main() {
     leitura_ok = scanf("%d", &carta2.pontosturisticos);
     if (leitura_ok != 1) return 1;
     printf("\n");
- return 0
+ return 0;
 }
