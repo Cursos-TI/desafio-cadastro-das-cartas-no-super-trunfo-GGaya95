@@ -15,7 +15,7 @@ typedef struct {
     //novas variáveis
     float densidade_populacional;
     float pib_per_capita;
-    
+    float SuperPoder; //cálculo de todas as variáveis com a densidade populacional invertida    
 } Carta;
 
 int main() {
@@ -54,6 +54,12 @@ int main() {
       printf("O PIB per capita é: %.2f" , carta1.pib_per_capita);
       printf("\n");
 
+      // Calcula o SuperPoder da carta 1
+    carta1.SuperPoder = carta1.populacao + carta1.pontosturisticos + carta1.area + carta1.pib + (1.0f / carta1.densidade_populacional) + carta1.pib_per_capita;
+    printf("O SuperPoder da primeira carta é: %.2f\n", carta1.SuperPoder);
+
+
+
     // Informações da segunda carta
     printf("**** Informe os dados da segunda carta ****\n");
     printf("Código: ");
@@ -83,10 +89,9 @@ int main() {
         printf("O PIB per capita é: %.2f", carta2.pib_per_capita);
         printf("\n");
 
-
-
-
-
+ // Calcula o SuperPoder da carta 2
+    carta2.SuperPoder = carta2.populacao + carta2.pontosturisticos + carta2.area + carta2.pib + (1.0f / carta2.densidade_populacional) + carta2.pib_per_capita;
+    printf("O SuperPoder da segunda carta é: %.2f\n", carta2.SuperPoder);
 
         return 0;
 }
